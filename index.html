@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="im/im0.png" rel="icon" type="image/png" />
+  <link rel="stylesheet" href="style1.css">
+    <title>TurboNet WiFi Company</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+    header {
+            background-image: url('im/img_logo.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 200px; /* Set a height for the header */
+      color: red;
+      padding:1px;
+	  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+      text-align: center;
+	  position: relative; /* Added to position the logo */
+      cursor: pointer;
+	  animation: pulsate 5s infinite alternate; /* Adjust the duration and timing as needed */
+    }
+
+    @keyframes pulsate {
+      0% {
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(1.05);
+      }
+    }
+    .headerlogo {
+      position: absolute;
+      top: 10px;
+      left: 500px;
+      width: 100px; /* Adjust the size as needed */
+      height: auto;
+    }
+    .header h1, .header h2 {
+      margin: 5px 0;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: none;
+    }
+
+    nav ul li {
+      display: inline;
+      margin: 10px 0;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+    }
+    .head-item {
+       padding: 10px;
+       font-size: 18px;
+       color: white;
+       cursor: pointer;
+       text-decoration:none;
+    }
+    .head-item:hover {
+       background-color: RED;
+       color: #FFF;
+    }
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+        .cardadvert {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        .cardadvert:hover {
+            transform: translateY(-10px);
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        .card img {
+            width: 100%;
+            height: 100px;
+            object-fit: cover;
+        }
+        .card-content {
+            padding: 20px;
+        }
+        .card-content h2 {
+            color: #007BFF;
+            margin-bottom: 15px;
+        }
+        .card-content p {
+            font-size: 1em;
+            line-height: 1.6;
+        }
+        .card-content ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .card-content li {
+            margin-bottom: 10px;
+        }
+    </style>
+    <style>
+        /* Existing CSS styles */
+        /* ... */
+
+        .faq {
+            margin-top: 30px;
+        }
+        .faq-item {
+            margin-bottom: 20px;
+        }
+        .faq-question {
+            font-weight: bold;
+            color: #007BFF;
+            cursor: pointer;
+        }
+        .faq-answer {
+            display: none;
+            margin-top: 10px;
+        }
+    </style>
+	<style>
+    .social-icons {
+        margin-top: 20px;
+    }
+    .social-icons a {
+        display: inline-block;
+        margin: 0 10px;
+        transition: transform 0.3s ease-in-out;
+    }
+    .social-icons a:hover {
+        transform: scale(1.2);
+    }
+    .social-icons img {
+        width: 24px;
+        height: 24px;
+    }
+    .contact-info {
+        margin-top: 10px;
+        font-size: 16px;
+    }
+    .contact-info a {
+        color: #333;
+        text-decoration: none;
+        transition: color 0.3s ease-in-out;
+    }
+    .contact-info a:hover {
+        color: #007bff;
+    }
+    .contact-info img {
+        width: 20px;
+        height: 20px;
+        vertical-align: middle;
+        margin-right: 5px;
+    }
+	</style>
+    <style>
+        .slide {
+            display: none;
+            text-align: center;
+        }
+
+        .slide img {
+            max-width: 100%;
+            opacity: 0;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+        }
+
+        /* Fade-in animation */
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Slide-in from the left animation */
+        @keyframes slideInLeft {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        /* Slide-in from the right animation */
+        @keyframes slideInRight {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        /* Zoom-in animation */
+        @keyframes zoomIn {
+            from {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .active img.fade-in {
+            animation-name: fadeIn;
+        }
+
+        .active img.slide-in-left {
+            animation-name: slideInLeft;
+        }
+
+        .active img.slide-in-right {
+            animation-name: slideInRight;
+        }
+
+        .active img.zoom-in {
+            animation-name: zoomIn;
+        }
+
+        .active {
+            display: block;
+        }
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .footer p {
+            margin: 0;
+        }
+        .message {
+            display: none;
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+    .foot-item {
+	   background-color:#333;
+       padding: 10px;
+       font-size: 18px;
+       color: white;
+       cursor: pointer;
+       text-decoration:none;
+    }
+    .foot-item:hover {
+       background-color: lightgreen;
+       color: white;
+    }
+    </style>
+<style>
+        #chat-box {
+            border: 1px solid #ccc;
+            padding: 10px;
+            height: 300px;
+            overflow-y: scroll;
+            margin-bottom: 20px;
+        }
+
+        #chat-box div {
+            margin-bottom: 10px;
+        }
+
+        input[type="email"],
+        input[type="text"],
+        button {
+            width: 98%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+  <header id="main-header">
+  <img src="im/im0.png" alt="turbonet Logo" class="headerlogo">
+    <h1 id="title"></h1>
+	<h3 id="slogan"></h3>
+    
+    <nav>
+      <ul>
+        <li><a href="#About us" class="head-item">About us</a></li>
+        <li><a href="#Our Packages" class="head-item">Our Packages</a></li>
+		<li><a href="#Your Support" class="head-item">Your Support</a></li>
+        <li><a href="#Adverts" class="head-item">Adverts</a></li>
+		<li><a href="#FAQ" class="head-item">FAQ</a></li>
+		<li><a href="T_Dice.html"  target="_blank" class="head-item">T_Dice</a></li>
+      </ul>
+    </nav>
+  </header>
+  <script>
+    const title = document.getElementById('title');
+    const slogan = document.getElementById('slogan');
+
+    function animateText(element, text) {
+      let index = 0;
+      const interval = setInterval(() => {
+        element.textContent += text[index];
+        index++;
+        if (index === text.length) {
+          clearInterval(interval);
+        }
+      }, 100); // Adjust the speed here (milliseconds per letter)
+    }
+
+    animateText(title, 'Turbonet Wifi');
+    animateText(slogan, 'Exploring limits and driving innovation');
+  </script>
+   <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var header = document.getElementById("main-header");
+      var nav = document.querySelector("nav ul");
+
+      header.addEventListener("mouseenter", function () {
+        nav.style.display = "block";
+      });
+
+      header.addEventListener("mouseleave", function () {
+        nav.style.display = "none";
+      });
+    });
+  </script>
+    <div class="container">
+        <div class="card" id="About us">
+            <img src="im/im01.jpg" alt="Card Image 1">
+            <div class="card-content">
+                <h2>About Us And Our Services</h2>
+                <p>TurboNet WiFi Company is a leading provider of high-speed and reliable internet services in our community.</p>
+                <ul>
+                    <li>High-speed Internet</li>
+                    <li>Wi-Fi Hotspot Services</li>
+                    <li>Tech Support</li>
+                    <li>Cloud Storage Solutions</li>
+                </ul>            
+			</div>
+        </div>
+		
+        <div class="card" id="Our packages">
+            <img src="im/im1.jpg" alt="Card Image 2">
+            <div class="card-content">
+                <h2>Our Packages</h2>
+				<p>Choose your fevourite wifi package, order and go to any access point to enjoy.</p>
+                <p><b>	Wifi-rates/Price List</b></p>
+				<table border = 1 width=600>
+				<tr>
+				<th><b>Package</b></th>
+				<th><b>Price (Shillings)</b></th>
+				<th><b>Validity/Period</b></th>
+				</tr>
+				<tr>
+				<td><b><b>BRONZE PACKAGE</b></b></td>
+				<td><b>500</b></td>
+				<td><b>2 Hours</b></td>
+				</tr>
+				<tr>
+				<td><b>SILVER  PACKAGE</b></td>
+				<td><b>1,000</b></td>
+				<td><b>6, Hours</b></td>
+				</tr>
+				<tr>
+				<td><b>GOLD  PACKAGE</b></td>
+				<td><b>2,000</b></td>
+				<td><b>24 Hours</b></td>
+				</tr>
+				<tr>
+				<td><b>WEEK PAKALAST</b></td>
+				<td><b>10,000</b></td>
+				<td><b>1 Week</b></td>
+				</tr>
+				<tr>
+				<td><b>MONTH PAKALAST</b></td>
+				<td><b>35,000</b></td>
+				<td><b>1 Month</b></td>
+				</tr>
+				</table>
+            </div>
+        </div>
+
+
+        <div class="card" id="Your Support">
+            <img src="im/im3.jpg" alt="Card Image 1">
+            <div class="card-content">
+			<p><b><font color="lightgreen">Your Turbonet wifi support</font></b></p>
+				<div class="contact-info">
+					<b><img src="icons/phone_icon.png" alt="phone"> Phone: </b><a href="tel:+256707098015" target="_blank"> Click and Call Us</a><br><br>
+					<b><img src="icons/email_icon.png" alt="email"> Email: </b><a href="mailto:aaronadomeokwii@gmail.com" target="_blank">Aaron Adome</a><br><br>
+					<b><img src="icons/website_icon.png" alt="website"> Website: </b><a href="http://turbowireless.net/login?dst=http%3A%2F%2Fwww.msftconnecttest.com%2Fredirect" target="_blank">Turbonet packages.com</a><br><br>
+					<b><img src="icons/address_icon.png" alt="address"> Address (Access location): </b><a href="https://www.google.com/maps/dir//-0.5413455,30.1413679" target="_blank">TAH 8, Bushenyi-Ishaka, Uganda</a>
+<br><br>
+				</div>
+				<div class="social-icons">
+					<a href="mailto:aaronadomeokwii@gmail.com"  target="_blank"><img src="icons/gmail_icon.png" alt="Gmail"></a>
+					<a href="https://wa.me/+256765032117"><img src="icons/phone_icon.png" alt="whatsapp"></a>
+					<!-- Add more professional social media icons and links as needed -->
+				</div>
+				<marquee><font color="lightgreen">See me when you can! feel free.</font></marquee>
+           
+			</div>
+        </div>
+        <div class="cardadvert" id="Adverts">
+            <div class="card-content">
+			<h2>Turbonet wifi adverts</h2>
+				<center>
+				<div class="slider">
+					<div class="slides">
+						<!--radio buttons start-->
+						<input type="radio" name="radio-btn" id="radio1">
+						<input type="radio" name="radio-btn" id="radio2">
+						<input type="radio" name="radio-btn" id="radio3">
+						<input type="radio" name="radio-btn" id="radio4">
+						<!--radio buttons end-->
+						<!--slide images start-->
+				<div class="slide active">
+					<img class="fade-in" src="im/im4.jpg" alt="Slide 1">
+				</div>
+
+				<div class="slide">
+					<img class="slide-in-left" src="im/im5.jpg" alt="Slide 2">
+				</div>
+
+				<div class="slide">
+					<img class="slide-in-right" src="im/im6.jpg" alt="Slide 3">
+				</div>
+
+				<div class="slide">
+					<img class="zoom-in" src="im/im7.jpg" alt="Slide 4">
+				</div>
+						<!--slide images end-->
+						<!--automatic navigation start-->
+						<div class="navigation-auto">
+						<div class="auto-btn1"></div>
+						<div class="auto-btn2"></div>
+						<div class="auto-btn3"></div>
+						<div class="auto-btn4"></div>
+						</div>
+						<!--automatic navigation end-->
+					</div>
+					<!--manual navigation start-->
+					<div class="navigation-manual">
+						<label for="radio1" class="manual-btn"></label>
+						<label for="radio2" class="manual-btn"></label>
+						<label for="radio3" class="manual-btn"></label>
+						<label for="radio4" class="manual-btn"></label>
+					</div>
+				</div>
+				</center>
+<script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+
+    function showSlide(n) {
+        slides[currentSlide].classList.remove('active');
+        slides[n].classList.add('active');
+        currentSlide = n;
+    }
+
+    setInterval(() => {
+        let nextSlide = (currentSlide + 1) % slides.length;
+        showSlide(nextSlide);
+    }, 5000); // Change slide every 3 seconds
+</script>
+    <script type="text/javascript">
+    var counter = 1;
+    setInterval(function(){
+      document.getElementById('radio' + counter).checked = true;
+      counter++;
+      if(counter > 4){
+        counter = 1;
+      }
+    }, 5000);
+    </script>
+           
+			</div>
+        </div>		
+        <div class="card" id="FAQ">
+            <img src="im/im2.jpg" alt="Card Image 3">
+            <div class="card-content">
+                <h2>Frequently Asked Questions</h2>
+				<div class="faq">
+					<div class="faq-item">
+						<div class="faq-question">What Truely is turbonet?</div>
+						<div class="faq-answer">
+						<p><b>Turbonet can best be viewed as Adomes Di cube.</b></p>
+						<p><b>The image of the doctors stress analysis rings</b></p>
+						<p>An image which appears to be moving if you try to look at whole the rings at once. but doesnt do so if ypou looked all of them together at once. which is the first common thing we do under conditions of stress.</p>
+						<img src="im/imd0.jpg" style="width:200px; height:200px;">
+						<p><b>The image of Adomes Di-cube</b></p>						
+						<img src="im/imd1.png" style="width:50%; height:50%;">
+						<p>Contructed in the same logic as the doctor stress analysis rings. The ADc can be looked by doctors as an analysis object but the true nature is yet to be revilled. In medicine its the ADc Object shows that under conditions of stress, humans have low concentration ability, the inability to focus on one thing for a long. the ADc is atool that can be used used for the measurement of self concentration rate.</p>
+						<p>If you gave the majority of people to identify the shape the see in the ADc and you tell them that the shape does exit surely they will observe the shape. The continous appearance of changes in shape for the cube or rotation of the rings shown below is due to the continous shift human concentration. If you focus on the first square to be draw, you will see one thing, an "M" will apppear, thats the view from the yellow marked spots and if you focus on the next two squares lower square you will see a "W" appearance, that the view from the red marked spots.</p>
+						<p>Therefore stress has a strong corrorelation to she shift focus for the majority of people in the community.</p>
+						<p><b>Go to the last last question click on it and submit your article or observations.</b></p>
+						<p><b>Questions!!!</b></p>
+						<p>1. how can you modify it.</p>
+						<p>2. how can you use its knowlege. its symmetry.remember the egyptians who contructed the pyramids cared alo;t about symmetry so did davinci when building their most reknown art master pieces. </p>
+						<p>3. Add links of more related diagrams</p>
+						<p><b>How the cube is related to turbonet wifi.</b></p>
+						<p>> Turbonet is like the cube. anyone can use it to create and innovate the future which is the mission of turbonet. it helps you achieve your dreams, your vision by providing you with the tools neccesary</p>
+						<p>> It helps you look. so look, see something, get up and follow it. All races begin with a single step of an individual.</p>
+						<p>> Thankyou</p>
+						<p>Continoous visit this site for insight like this. Which will inspire you to create the future. At turbonet we help. lets innovate together</p>
+						</div>
+					</div>
+					<div class="faq-item">
+						<div class="faq-question">What internet speed packages do you offer?</div>
+						<div class="faq-answer">We offer various high-speed internet packages to suit different needs and budgets. Please visit our Plans & Pricing page for more details.</div>
+					</div>
+					<div class="faq-item">
+						<div class="faq-question">How can I contact your tech support?</div>
+						<div class="faq-answer">You can contact our tech support team 24/7 by phone, email, or through our online chat service.</div>
+					</div>
+					<div class="faq-item">
+						<div class="faq-question">Do you provide Wi-Fi hotspot services?</div>
+						<div class="faq-answer">Yes, we offer Wi-Fi hotspot services in public areas to help you stay connected on the go.</div>
+					</div>
+					<div class="faq-item">
+						<div class="faq-question">How do I sign up for TurboNet WiFi?</div>
+						<div class="faq-answer">Signing up for TurboNet WiFi is easy! You can register online through our website or contact our customer support team for assistance.</div>
+					</div>
+					<div class="faq-item">
+						<div class="faq-question">What can i do at TurboNet WiFi?</div>
+						<div class="faq-answer">
+						<u>All online activities such as</u>
+						<ol>
+							<li>Online streaming</li>
+							<li>Forex trading</li>
+							<li>Reseach</li>
+						</ol>
+						</div>
+						<div class="faq-question"><p>How can turbonet be updated to suit you best?</p></div>
+						<div class="faq-answer">
+    <div id="chat-box">
+        <!-- Messages will be displayed here -->
+    </div>
+    
+    <input type="email" id="email-input" placeholder="Your Email">
+    <input type="text" id="message-input" placeholder="Type your message...">
+    <button onclick="sendMessage()">Send</button>
+
+    <script>
+        let chatBox = document.getElementById('chat-box');
+        let emailInput = document.getElementById('email-input');
+        let messageInput = document.getElementById('message-input');
+
+        // Load messages from local storage when the app starts
+        window.onload = function() {
+            let messages = localStorage.getItem('messages') ? localStorage.getItem('messages').split(',') : [];
+            
+            messages.forEach(message => {
+                let [email, msg, date] = message.split('|');
+                appendMessage(email, msg, date);
+            });
+        }
+
+        function sendMessage() {
+            let email = emailInput.value;
+            let message = messageInput.value;
+            let date = new Date().toLocaleString(); // Get current date and time
+            
+            if (email.trim() === '' || message.trim() === '') {
+                alert('Email and message cannot be empty');
+                return;
+            }
+            
+            appendMessage(email, message, date);
+            saveMessage(email, message, date); // Save the message to local storage
+            emailInput.value = '';
+            messageInput.value = '';
+        }
+
+        function appendMessage(sender, message, date) {
+            let messageElement = document.createElement('div');
+            messageElement.textContent = `${sender} (${emailInput.value}) - ${date}: ${message}`;
+            chatBox.appendChild(messageElement);
+            chatBox.scrollTop = chatBox.scrollHeight; // Scroll to the bottom
+        }
+
+        function saveMessage(email, message, date) {
+            let currentMessages = localStorage.getItem('messages') ? localStorage.getItem('messages').split(',') : [];
+            currentMessages.push(`${email}|${message}|${date}`);
+            localStorage.setItem('messages', currentMessages.join(','));
+        }
+    </script>
+						</div>
+					</div>
+				</div>
+    <script>
+        const faqQuestions = document.querySelectorAll('.faq-question');
+
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                answer.style.display = answer.style.display === 'none' ? 'block' : 'none';
+            });
+        });
+    </script>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer and other sections -->
+    <div class="footer">
+        <p>&copy; 2024 TurboNet WiFi Company. All rights reserved.
+		<input type="button" class="foot-item" id="showMessage" value="Show Message"></p>
+        <div class="message" id="messageContent">Thank you for visiting our website!</div>
+    <script>
+        const showMessageBtn = document.getElementById('showMessage');
+        const messageContent = document.getElementById('messageContent');
+
+        showMessageBtn.addEventListener('click', () => {
+            messageContent.style.display = 'block';
+            setTimeout(() => {
+                messageContent.style.display = 'none';
+            }, 3000); // Hide message after 3 seconds
+        });
+    </script>
+    </div>
+</body>
+</html>
